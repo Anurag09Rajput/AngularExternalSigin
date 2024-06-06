@@ -1,0 +1,38 @@
+<div class="signup-page-container">
+    <div class="left-animation-wrapper">
+        <img src="../../../assets/images/contact.png">
+    </div>
+    <div class="signup-form-wrapper">
+        <form #signupForm="ngForm" (ngSubmit)="OnSubmitSignupForm(signupForm)">
+            <div class="form-field">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstName" ngModel>
+            </div>
+            <div class="form-field">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastName" ngModel>
+            </div>
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" name="email" ngModel>
+            </div>
+            <div class="form-field">
+                <label for="password">Password</label>
+                <input type="password" name="password" ngModel>
+            </div>
+            <div class="form-field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" name="confirmPassword" ngModel>
+            </div>
+            <div class="button-wrapper">
+                <button type="button" class="btn-clear" onclick="ClearForm(signupForm)">Clear</button>
+                <button type="submit" class="btn-submit">Submit</button>
+            </div>
+        </form>
+        <asl-google-signin-button type='icon' size='medium'>Sign-in with Google</asl-google-signin-button>
+    </div>
+    <div>
+        <p>Already Registered</p>
+        <a [routerLink]="['','login']">Login</a>
+    </div>
+</div>
